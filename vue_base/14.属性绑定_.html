@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性绑定_</title>
+     <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <a v-bind:href="url">baidu.com1</a>
+        <a :href="url">baidu.com2</a>
+        <button @click="hdl">切换</button>
+
+        <!-- v-model 的本质 -->
+        <input type="text" v-bind:value="msg" v-on:input="hd_input">
+        <input type="text" v-bind:value="msg" v-on:input="msg=$event.target.value">
+        <input type="text" v-model:value="msg">
+        <div v-text="msg"></div>
+    </div>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            url: 'https://www.baidu.com',
+            msg: 'hello'
+        },
+        methods: {
+            hdl: function () {
+            //    修改url
+                this.url='https://github.com/similarface/vue_base';
+            },
+
+            hd_input: function (event) {
+                this.msg = event.target.value;
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

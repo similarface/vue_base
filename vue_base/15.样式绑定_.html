@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式绑定_</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        .active {
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+
+        .error {
+            background-color: orange;
+        }
+
+        .test {
+            color: blue;
+        }
+
+        .base {
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="active error">data1</div>
+    <!--对象绑定-->
+    <div v-bind:class="{active:isActive, error: isError}">data2</div>
+    <button v-on:click="hdl">切换</button>
+
+    <!--数组绑定-->
+    <div v-bind:class='[activeClass, errorClass]'></div>
+    <button v-on:click="hdl2">切换2</button>
+
+    <!--对象+数组绑定-->
+    <div v-bind:class='[activeClass, errorClass, {test:isTest}]'></div>
+    <button v-on:click="hdl2">切换3</button>
+
+    <!-- 数组简化 -->
+    <div v-bind:class='arrClasses'></div>
+    <button v-on:click="hdl2">切换4</button>
+
+
+    <!-- 对象简化 -->
+    <div v-bind:class='objClasses'></div>
+    <button v-on:click="hdl2">切换5</button>
+
+    <div class="base" v-bind:class="objClasses"></div>
+
+</div>
+<script>
+    /*
+    数组和对象绑定可以结合是使用
+
+    class绑定的值可以简化操作
+
+    默认的class 会保留
+     */
+    new Vue({
+        el: '#app',
+        data: {
+            isActive: true,
+            isError: true,
+            isTest:true,
+            activeClass: 'active',
+            errorClass: 'error',
+            arrClasses: ['active','error'],
+            objClasses: {
+                active: true,
+                error: true
+            }
+        },
+        methods: {
+
+            hdl: function () {
+                //
+                this.isActive = !this.isActive;
+                this.isError = !this.isError;
+            },
+
+            hdl2: function () {
+                this.activeClass = null;
+                this.errorClass = null;
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
