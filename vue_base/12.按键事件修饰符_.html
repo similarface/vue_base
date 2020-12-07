@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按键事件修饰符_</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <div>
+            用户名：
+            <input type="text" @keyup.delete="clearContent" v-model="username">
+        </div>
+        <div>
+            密码：
+            <input type="text" @keyup.enter="handleSubmit" v-model="password">
+
+        </div>
+        <div>
+            <input type="button" @click="handleSubmit" value="提交">
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            username: "",
+            password: ""
+        },
+        methods: {
+            handleSubmit: function () {
+                console.log(this.username, this.password);
+            },
+            clearContent: function () {
+                // 按 delete清空username
+                this.username = "";
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

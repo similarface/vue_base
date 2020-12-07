@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定_</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>{{num}}</div>
+    <div>
+        <!-- 点击事件 -->
+        <button v-on:click='num++'>点击1</button>
+        <button @click='num++'>点击2</button>
+
+        <!--事件函数调用方式-->
+        <button @click='event_fun'>点击3</button>
+        <button @click='event_fun()'>点击3()</button>
+
+
+        <!-- 事件函数参数传递 -->
+        <button @click='envent_fun_parameter(10, $event)'>点击4(+10)</button>
+
+        <!-- 事件函数默认参数 -->
+        <button @click='event_fun_default'>点击5(event)</button>
+    </div>
+</div>
+
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            num: 0
+        },
+        methods: {
+            event_fun: function () {
+                this.num = this.num + 3;
+            },
+
+            envent_fun_parameter: function (k) {
+                this.num = this.num + k;
+            },
+
+            event_fun_default: function (event) {
+                console.log(event.target.innerHTML);
+            },
+
+        }
+    });
+</script>
+
+</body>
+</html>

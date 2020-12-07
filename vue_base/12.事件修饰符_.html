@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件修饰符_</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>{{num}}</div>
+    <div>
+        <div @click="event_fun0">
+            <button @click='event_fun1'>点击1</button>
+            <!-- 修饰符阻止冒泡 -->
+            <button @click.stop='event_fun1'>点击2</button>
+            <div>
+                <a href="www.baidu.com" @click="event_fun2">baidu.com</a>
+            </div>
+
+            <div>
+                <a href="www.baidu.com" @click.prevent="event_fun3">baidu.com</a>
+            </div>
+            <div>
+                <a href="www.baidu.com" @click.prevent.stop="event_fun3">baidu.com</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            num: 0
+        },
+        methods: {
+            event_fun0: function () {
+                this.num = this.num + 3;
+            },
+
+            event_fun1: function (envent) {
+                // 阻止冒泡
+                event.stopPropagation();
+            },
+
+            event_fun2: function (event) {
+                event.preventDefault();
+
+            },
+            event_fun3: function (event) {
+
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

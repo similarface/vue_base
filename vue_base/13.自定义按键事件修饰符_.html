@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义按键事件修饰符_</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <div>
+            键盘按键：
+            <input type="text" @keyup="handle">
+            <div>键盘按键码: {{keyInfo}}</div>
+
+            <input type="text" @keyup.65="handle_a">
+
+            <input type="text" @keyup.aaa="handle_aaa">
+        </div>
+    </div>
+</div>
+
+
+<script>
+    <!-- 自定义 -->
+    Vue.config.keyCodes.aaa = 65;
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            keyInfo: ""
+        },
+        methods: {
+            handle: function (event) {
+                console.log(event.keyCode);
+                this.keyInfo = event.keyCode;
+            },
+
+            handle_a: function (event) {
+                console.log(event.keyCode);
+            },
+
+            handle_aaa: function (event) {
+                console.log(event.keyCode);
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
