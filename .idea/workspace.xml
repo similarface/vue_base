@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0349a1f1-c097-430f-ae64-aecd4c28e6ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vue_base/19.Tab选项卡.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue_base/18.循环结构_.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue_base/18.循环结构_.html" afterDir="false" />
-    </list>
+    <list default="true" id="0349a1f1-c097-430f-ae64-aecd4c28e6ac" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,8 +119,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue_base/19.Tab选项卡.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+            <state relative-caret-position="199">
+              <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -184,8 +180,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1045" />
-    <option name="y" value="-1057" />
+    <option name="x" value="973" />
+    <option name="y" value="-865" />
     <option name="width" value="1920" />
     <option name="height" value="1057" />
   </component>
@@ -261,8 +257,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1188" y="-474" width="1920" height="1057" extended-state="0" />
-    <editor active="true" />
+    <frame x="973" y="-865" width="1920" height="1057" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.2342932" />
@@ -270,7 +265,7 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.25284973" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.5139896" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -425,8 +420,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue_base/19.Tab选项卡.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+        <state relative-caret-position="199">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
         </state>
       </provider>
     </entry>
