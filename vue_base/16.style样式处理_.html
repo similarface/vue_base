@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style样式处理_</title>
+     <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="" v-bind:style="{border: borderStyle, width:widthStyle, height:heightStyle}"></div>
+        <div v-bind:style="[objStyles]"></div>
+        <div v-bind:style="[objStyles, overrideStyle]"></div>
+    </div>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            borderStyle: "1px solid blue",
+            widthStyle: "100px",
+            heightStyle: "100px",
+            objStyles: {
+                border: "1px solid blue",
+                width: "100px",
+                height: "100px",
+            },
+            overrideStyle: {
+                border: '5px solid orange',
+                backgroundColor: 'blue'
+            }
+
+        },
+        methods: {
+
+        }
+    })
+</script>
+</body>
+</html>

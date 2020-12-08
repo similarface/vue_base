@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0349a1f1-c097-430f-ae64-aecd4c28e6ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vue_base/14.属性绑定_.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_base/15.样式绑定_.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_base/t.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_base/16.style样式处理_.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_base/17.分支循环结构_.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_base/18.循环结构_.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue_base/10.事件绑定_.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue_base/09.事件绑定_.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue_base/12.事件修饰符_.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue_base/10.事件修饰符_.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue_base/12.按键事件修饰符_.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue_base/11.按键事件修饰符_.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue_base/13.自定义按键事件修饰符_.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue_base/12.自定义按键事件修饰符_.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue_base/15.简单计算器_.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue_base/13.简单计算器_.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,50 +23,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="10" />
+          <entry key="html" value="13" />
           <entry key="js" value="3" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="10" />
+          <entry key="HTML" value="13" />
           <entry key="JavaScript" value="3" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2693" />
+          <entry key="html" value="3646" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2693" />
+          <entry key="HTML" value="3646" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue_base/08.双向数据绑定.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" selection-start-line="7" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue_base/09.事件绑定_.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue_base/10.事件修饰符_.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/vue_base/13.简单计算器_.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="63" />
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -112,16 +89,43 @@
         <entry file="file://$PROJECT_DIR$/vue_base/14.属性绑定_.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="404">
-              <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue_base/15.样式绑定_.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue_base/16.style样式处理_.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue_base/17.分支循环结构_.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue_base/15.样式绑定_.html">
+        <entry file="file://$PROJECT_DIR$/vue_base/18.循环结构_.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+            <state relative-caret-position="524">
+              <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -130,20 +134,7 @@
         <entry file="file://$PROJECT_DIR$/vue_base/t.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="23" column="7" lean-forward="true" selection-end-line="23" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vue.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2800">
-              <caret line="11941" column="7" selection-start-line="11941" selection-start-column="7" selection-end-line="11941" selection-end-column="7" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="23" column="7" selection-end-line="23" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -180,6 +171,9 @@
         <option value="$PROJECT_DIR$/vue_base/16.属性绑定_.html" />
         <option value="$PROJECT_DIR$/vue_base/14.属性绑定_.html" />
         <option value="$PROJECT_DIR$/vue_base/15.样式绑定_.html" />
+        <option value="$PROJECT_DIR$/vue_base/16.style样式处理_.html" />
+        <option value="$PROJECT_DIR$/vue_base/17.分支循环结构_.html" />
+        <option value="$PROJECT_DIR$/vue_base/18.循环结构_.html" />
       </list>
     </option>
   </component>
@@ -189,11 +183,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="856" />
-    <option name="y" value="-899" />
-    <option name="width" value="1542" />
-    <option name="height" value="856" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="1489" />
+    <option name="y" value="-1024" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -267,16 +261,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="856" y="-899" width="1542" height="856" extended-state="0" />
+    <frame x="802" y="-1057" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.206" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16453674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.2539267" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.25284973" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,28 +359,49 @@
     <entry file="file://$PROJECT_DIR$/vue_base/13.简单计算器_.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="63" />
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue_base/14.属性绑定_.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_base/15.样式绑定_.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue_base/t.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="7" lean-forward="true" selection-end-line="23" selection-end-column="7" />
+          <caret line="23" column="7" selection-end-line="23" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue_base/15.样式绑定_.html">
+    <entry file="file://$PROJECT_DIR$/vue_base/16.style样式处理_.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        <state relative-caret-position="330">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_base/17.分支循环结构_.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_base/18.循环结构_.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
         </state>
       </provider>
     </entry>

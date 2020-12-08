@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环结构_</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>水果列表</div>
+    <ul>
+        <li v-for="item in fruits">{{item}}</li>
+
+        <li v-for="(item, index) in fruits">{{item + '-' + index}}</li>
+
+        <!-- 加入key 提高性能 -->
+        <li :key="index" v-for="(item, index) in myFruits">
+            <span>{{item.cname}}</span>
+            <span>----------------</span>
+            <span>{{item.ename}}</span>
+        </li>
+
+        <!-- 加入key 提高性能 -->
+        <li :key="item.id" v-for="item in myFruits">
+            <span>{{item.cname}}</span>
+            <span>----------------</span>
+            <span>{{item.ename}}</span>
+        </li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            fruits: ['apple', 'blanana', 'peach'],
+
+            myFruits: [{
+                id: 1,
+                ename: 'apple',
+                cname: '🍎'
+            },
+                {
+                    id: 2,
+                    ename: 'orange',
+                    cname: '🍊'
+                },
+                {
+                    id: 3,
+                    ename: 'banana',
+                    cname: '🍌'
+                }
+            ]
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>
