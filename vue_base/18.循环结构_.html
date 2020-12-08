@@ -27,32 +27,68 @@
             <span>{{item.ename}}</span>
         </li>
     </ul>
-</div>
-<script>
-    new Vue({
-        el: '#app',
-        data: {
-            fruits: ['apple', 'blanana', 'peach'],
+    <!-- 遍历对象-->
+    <div v-for="(v,k,i) in obj">
+        {{v + ' --- ' + k + ' --- '+i}}
+    </div>
 
-            myFruits: [{
-                id: 1,
-                ename: 'apple',
-                cname: '🍎'
-            },
-                {
-                    id: 2,
-                    ename: 'orange',
-                    cname: '🍊'
+
+    <!-- 遍历对象-->
+    <div v-if="v==30" v-for="(v,k,i) in obj2">
+        {{v + ' --- ' + k + ' --- '+i}}
+    </div>
+
+
+    <!-- 遍历对象-->
+    <div v-if="v==30" v-for="(v,k,i) in obj3">
+        {{v
+
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                fruits: ['apple', 'blanana', 'peach'],
+
+                myFruits: [{
+                    id: 1,
+                    ename: 'apple',
+                    cname: '🍎'
                 },
-                {
-                    id: 3,
-                    ename: 'banana',
-                    cname: '🍌'
+                    {
+                        id: 2,
+                        ename: 'orange',
+                        cname: '🍊'
+                    },
+                    {
+                        id: 3,
+                        ename: 'banana',
+                        cname: '🍌'
+                    }
+                ],
+
+                obj: {
+                    name: 'yy',
+                    age: 100,
+                    gender: 'male'
+                },
+
+                obj2: {
+                    name: 'yy2',
+                    age: 30,
+                    gender: 'female'
                 }
-            ]
-        },
-        methods: {}
-    })
-</script>
+                ,
+
+                obj3: {
+                    name: 'yy3',
+                    age: 10,
+                    gender: 'female'
+                }
+
+            },
+            methods: {}
+        })
+    </script>
 </body>
 </html>
