@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<!-- 自动聚焦 -->
+<div id="app">
+    <input type="text">
+    <input type="text" v-focus>
+
+    <input type="text" v-color="msg">
+</div>
+<script>
+    /**
+     自定义指令 https://cn.vuejs.org/v2/guide/custom-directive.html
+     * **/
+    // 全局指令
+    // Vue.directive('focus', {
+    //     inserted: function (el) {
+    //         // el 表示指令所绑定的元素
+    //         el.focus();
+    //     }
+    // });
+
+    // Vue.directive('color', {
+    //     bind: function (el, binding) {
+    //         // 根据参数 设置背景色
+    //         console.log(binding.value);
+    //
+    //         el.style.backgroundColor = binding.value.color;
+    //     }
+    // });
+
+    let vue = new Vue({
+        el: '#app',
+        data: {
+            msg: {
+                color: 'yellow'
+            }
+        },
+        methods: {},
+        // 局部指令 只能在本组件中使用
+        directives: {
+            color: {
+                bind: function (el, binding) {
+                    // 根据参数 设置背景色
+                    console.log(binding.value);
+                    el.style.backgroundColor = binding.value.color;
+                }
+            },
+            focus:{
+                inserted: function (el) {
+                    // el 表示指令所绑定的元素
+                    el.focus();
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
