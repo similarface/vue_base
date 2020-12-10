@@ -22,6 +22,17 @@
     </div>
     <div>{{fullName}}</div>
     <div>{{fullName2}}</div>
+
+
+    <div>
+        <!--
+         通过v-model实现数据绑定
+         提供提示信息
+         需要监听器监听输入信息变化
+         修改触发事件
+         -->
+        <span>用户名：</span> <span><input type="text" v-model.lazy="username"></span><span>{{tip}}</span>
+    </div>
 </div>
 <script>
     new Vue({
@@ -29,16 +40,34 @@
         data: {
             firstName: 'Jim',
             lastName: 'Green',
-            fullName: 'Jim Green'
+            fullName: 'Jim Green',
+            username: '',
+            tip: ''
         },
-        methods: {},
-        //数据变化时执行异步或开销比较大的操作
+        methods: {
+            //数据变化时执行异步或开销比较大的操作
+            checkUserName: function (uname) {
+                that = this;
+                setTimeout(function (uname) {
+                    if (uname == 'admin') {
+                        that.tip = '用户名已经存在。';
+                    } else {
+                        that.tip = '用户名可用';
+                    }
+                }, 1000)
+            }
+        },
+
         watch: {
             firstName: function (val) {
                 this.fullName = val + ' ' + this.lastName;
             },
             lastName: function (val) {
                 this.fullName = this.firstName + ' ' + val;
+            },
+            username: function (val) {
+                this.checkUserName(val);
+                this.tip = 'checking...';
             }
         },
         computed: {
