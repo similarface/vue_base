@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>{{pmsg}}</div>
+    <menu-item title="来自父组件的值"></menu-item>
+    <menu-item :title="ptitle"></menu-item>
+    <!-- 传递多个值 -->
+    <menu-item :title="ptitle" content="hello"></menu-item>
+
+    <!-- 12 是 string-->
+    <menu-items :pstr="pstr" pnum="12" pbon=true></menu-items>
+
+    <!-- 12 是 number-->
+    <menu-items :pstr="pstr" :pnum="12" :pbon=true :parr="parr" :pobj="pobj"></menu-items>
+
+
+    <div :style='{fontSize: fontSize+"px"}'>{{pmsg}}</div>
+    <menu-items :pstr="pstr" :pnum="12" :pbon=true :parr="parr" :pobj="pobj" @enlarge-text="hdl($event)"></menu-items>
+
+    <tom></tom>
+    <holy></holy>
+
+    <div>
+        <button @click="hdldel">销毁</button>
+    </div>
+</div>
+<script>
+
+    Vue.component("menu-item", {
+        // props 的名称 使用小心 短横线 驼峰要使用短横线小写调用
+        // props 的值
+        props: ['title', 'content'],
+        data: function () {
+            return {
+                msg: '子组件本身的数据'
+            }
+        },
+        template: '<div>{{msg + "-----" + title + " ==> "+content}}</div>'
+    });
+
+
+    Vue.component("menu-items", {
+        // props 的名称 使用小心 短横线 驼峰要使用短横线小写调用
+        // props 的值
+        // 单向数据流
+        props: ['pstr', 'pnum', 'pbon', 'parr', 'pobj'],
+        data: function () {
+            return {
+                msg: '子组件本身的数据'
+            }
+        },
+        template: `
+            <div>
+                <div>{{pstr}}</div>
+                <div>{{typeof pnum}}</div>
+                <div>{{typeof pbon}}</div>
+                <ul>
+                <li :key='index' v-for='(item,index) in parr'> {{item}}</li>
+                <button @click="parr.push('LM')">点击</button>
+                <button @click='$emit("enlarge-text",5)'>扩大字体子向父传递值</button>
+                <button @click='$emit("enlarge-text",10)'>扩大字体10</button>
+                </ul>
+                <div>
+                    <span>{{ pobj }}</span>
+                </div>
+            </div>
+        `
+    });
+
+    // 非父子组件间传值 通过事件中心
+
+    // 提供事件中心
+
+    var hub = new Vue();
+
+    Vue.component("tom", {
+        data: function () {
+            return {
+                msg: "tom"
+            }
+        },
+        template: `
+            <div>
+                <div>Holy say: {{msg}}</div>
+                <div>
+                    <button @click="handle">Tom发言</button>
+                </div>
+            </div>
+        `,
+        methods: {
+            handle: function () {
+                //触发兄弟组件
+                hub.$emit('holy-event', 'I am tom');
+            }
+        },
+        mounted: function () {
+            hub.$on('tom-event', (val) => {
+                this.msg = this.msg + "\t" + val;
+            });
+        }
+    });
+
+
+    Vue.component("holy", {
+        data: function () {
+            return {
+                msg: 'holy'
+            }
+        },
+        template: `
+            <div>
+                <div>Tom say: {{msg}}</div>
+                <div>
+                    <button @click="handle">holy发言</button>
+                </div>
+            </div>
+        `,
+        methods: {
+            handle: function () {
+                hub.$emit('tom-event', 'I am holy');
+            }
+        },
+        mounted: function () {
+            hub.$on('holy-event', (val) => {
+                this.msg = this.msg + "\t" + val;
+            });
+        }
+    });
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            fontSize: 10,
+            pmsg: '父组件的数据',
+            ptitle: '动态绑定属性',
+            pstr: "123",
+            parr: ['apple', 'lemon'],
+            pobj: {
+                name: 'lisi',
+                age: '20'
+            }
+        },
+        methods: {
+            hdl: function (val) {
+                this.fontSize += val;
+            },
+            hdldel: function () {
+                hub.$off('holy-event');
+            }
+        },
+
+
+    });
+
+</script>
+</body>
+</html>
