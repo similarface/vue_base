@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+
+    <!-- 出错 -->
+    <!--<HelloWorld></HelloWorld>-->
+    <!-- 正常显示 -->
+    <hello-world></hello-world>
+
+    <!-- 局部组件 -->
+    <hello-world1></hello-world1>
+    <hello-world2></hello-world2>
+    <hello-world3></hello-world3>
+</div>
+<script>
+
+    /**
+     全局组件
+     */
+    // Vue.component('button-counter', {
+    //     // data 是函数
+    //     data: function () {
+    //         return {
+    //             count: 0
+    //         }
+    //     },
+    //     // 需要一个root
+    //     template: '<button @click="handle">点击了{{count}}</button>',
+    //     methods: {
+    //         handle: function () {
+    //             this.count += 2;
+    //         }
+    //     }
+    //
+    // });
+
+
+    /**
+     *  如果使用驼峰式命名 那么使用组件的时候 只能在字符串模版中用驼峰的方式使用组件
+     *  但在普通的标签模版中，必需使用短横线的方式使用组件
+     */
+    Vue.component('HelloWorld', {
+        // data 必需是函数
+        data: function () {
+            return {
+                msg: 'HelloWorld'
+            }
+        },
+        template: '<div>{{msg}}</div>',
+        methods: {}
+
+    });
+
+
+    // --------------
+    // 使用模版语法 template 好看点
+    Vue.component('button-counter', {
+        // data 必需是函数
+        data: function () {
+            return {
+                count: 0
+            }
+        },
+        // 需要单个根元素 `` 模版字符串
+        template: `
+            <div>
+                <button @click="handle">点击了{{count}}</button>
+                <button>测试</button>
+                <HelloWorld></HelloWorld>
+            </div>
+        `,
+        methods: {
+            handle: function () {
+                this.count += 2;
+            }
+        }
+
+    });
+
+    // ---------------------
+    //  局部组件
+    var HelloWorld1 = {
+        data: function () {
+            return {
+                msg: 'HelloWorld1'
+            }
+        },
+        template: '<div>{{msg}}</div>'
+
+    };
+
+    var HelloWorld2 = {
+        data: function () {
+            return {
+                msg: 'HelloWorldZS'
+            }
+        },
+        template: '<div>{{msg}}</div>'
+
+    };
+
+    var HelloWorld3 = {
+        data: function () {
+            return {
+                msg: 'HelloWorldLS'
+            }
+        },
+        template: '<div>{{msg}}</div>'
+
+    };
+    
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {},
+        // 局部组件全局不可用   只能在注册他的父组件中使用
+        components: {
+            'hello-world1': HelloWorld1,
+            'hello-world2': HelloWorld2,
+            'hello-world3': HelloWorld3
+        }
+    });
+
+</script>
+</body>
+</html>
